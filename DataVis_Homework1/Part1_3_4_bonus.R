@@ -90,7 +90,7 @@ data <- data %>%
   mutate(
     Severity_Score = case_when(
       !is.na(Weapon.Used.Cd) & grepl("burglary", Crm.Cd.Desc, ignore.case = TRUE) ~ 8, 
-      !is.na(Weapon.Used.Cd) ~ 5,  
+      !is.na(Weapon.Used.Cd) ~ 6,  
       grepl("burglary", Crm.Cd.Desc, ignore.case = TRUE) ~ 3, 
       TRUE ~ 1  
     )
